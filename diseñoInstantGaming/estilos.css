@@ -10,9 +10,74 @@ body{
 }
 
 
+/* <-------MENÚ HAMBURGUESA-----------> */
+
+.menuHamburguesa{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    z-index: -5;
+    top: 3%;
+    left: 5%;
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    cursor: pointer;
+
+}
+
+.menuHamburguesa>span{
+    transition: 0.5s ease-in-out;
+    height: 2px;
+    width: 90%;
+    display: block;
+    color: aliceblue;
+    background-color: rgb(255, 254, 254);
+  
+}
+
+
+#botonMenu{
+    position: fixed;
+    z-index: -6;
+    top: 3%;
+    left: 5%;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    cursor: pointer;
+
+
+}
+
+#botonMenu:checked + .menuHamburguesa>span:first-child{
+    transform: rotateZ(40deg) translateY(10px) translateX(8px);
+}
+
+#botonMenu:checked +.menuHamburguesa>span:nth-child(2){
+   transform: scaleX(0);
+   transform-origin: right;
+}
+
+#botonMenu:checked +.menuHamburguesa>span:last-child{
+    transform: rotateZ(-40deg) translateY(-8px) translateX(8px) ;
+}
+
+#botonMenu:checked ~ header{
+    top: 0%;
+}
+
+
+
 /* <--------BARRA NAVEGAIÓN---------> */
 
 header{
+    position: fixed;
+    z-index: 4;
+    top: 0%;
     width: 100vw;
     display: flex;
     justify-content: space-between;
@@ -22,6 +87,7 @@ header{
 header>div{
     display: flex;
     align-items: center;
+    gap: 20px;
 }
 
 header>div>h2{
@@ -39,7 +105,7 @@ nav{
 }
 
 header img{
-    width: 4vw;
+    width: 80pt;
     border-radius: 50%;
     margin-left: 10px;
 }
@@ -48,12 +114,11 @@ ul{
     display: flex;
     list-style: none;
     
-
 }
 
 ul>li{
-    margin-left: 15px;
-
+   padding-top:5px ;
+   padding-bottom: 5px;
 }
 
 ul>li>a{
@@ -73,7 +138,7 @@ ul>li>a:hover{
 /* <-------PARTE DE LOS JUEGOS--------> */
 
 .contenedorJuegos{
-    margin:50px auto;
+    margin:140px auto;
     width: 60vw;
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -84,7 +149,7 @@ ul>li>a:hover{
 .contenedorJuegos>div{
     position: relative;
     padding-bottom: 70%;
-   
+    cursor: pointer;
     
 }
 
@@ -96,6 +161,12 @@ ul>li>a:hover{
     height: 100%;
     text-align: center;
 }
+
+.contenedorJuegos>div>div>div{
+    display: flex;
+    justify-content: space-between;
+}
+
 
 .contenedorJuegos img{
     width: 100%;
@@ -121,9 +192,8 @@ ul>li>a:hover{
 
 footer{
     background-color: black;
-   position: absolute;
-   bottom: 0%;
-   width: 100vw;
+    position: relative;
+    width: 100vw;
     
 }
 
@@ -138,7 +208,7 @@ footer>div{
 
 footer:hover >div{
     transform: scaleX(1);
-   height: 40px;
+    height: 40px;
     
  
 }
@@ -161,5 +231,77 @@ footer:hover >h3{
 }
 
 
+@media (max-width:1200px){
+  
+    header img{
+        width: 40pt;
+    }
+
+    ul>li>a{
+        padding: 20px;
+        font-size: 10pt;
+    }
+
+    .contenedorJuegos{
+        margin:140px auto;
+        width: 80vw;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(4,1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width:800px){
+
+    .menuHamburguesa{
+        z-index: 5;
+    }
+
+    #botonMenu{
+        z-index: 6;
+    }
+
+    header img{
+        width: 40pt;
+    }
+
+    ul>li>a{
+        padding: 10px;
+        font-size:8pt;
+    }
+
+    .contenedorJuegos{
+        margin:140px auto;
+        width: 80vw;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-auto-rows: 1fr;
+        gap: 20px;
+    }
+
+    
+    header{
+        transition: 0.5s ease-in-out;
+        flex-direction: column;
+        top: -100%;
+        padding-top: 10px;
+    }
+
+    header>div{
+        flex-direction: column;
+    }
+
+    header>nav{
+        width: 100%;
+    }
+
+    header>nav>ul{
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        
+    }
+}
 
 
