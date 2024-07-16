@@ -1,0 +1,199 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #272727;
+}
+
+.contenedorPrincipalLogin{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+
+}
+
+/* <-------------PÁG INICIO SESION/REGISTRO------------> */
+
+.contenedorPrincipalLogin>div{
+    height: 100%;
+    width: 50%;
+    border: 2px solid black;
+}
+
+.contenedorPrincipalLogin>div:first-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedorPrincipalLogin>div:first-child>div{
+    width: 570px;
+}
+
+.contenedorPrincipalLogin>div:nth-of-type(2){
+   background-image: url("https://gizchina.com.ua/wp-content/uploads/2023/06/gta-six-1.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+input{
+    height: 60px;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 15pt;
+    border-radius: 5px;
+    border: 2px solid grey;
+    color: aliceblue;
+    background-color:rgb(22, 22, 22);
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+
+}
+
+input[type=submit]{
+    padding-top: 5px; 
+    cursor: pointer;
+    background: linear-gradient(0deg, rgb(195, 85, 34) 0%, rgba(240, 104, 74, 0.602) 100%);
+}
+
+input[type=submit]:hover{
+    background: linear-gradient(0deg, rgba(195,125,34,1) 0%, rgba(247,195,82,0.6024743690851735) 100%);
+    color: black;
+}
+
+.containerRedesSociales{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+   
+}
+
+hr{
+    width: 570px;
+    margin-bottom: 40px;
+    color: grey;
+}
+
+.containerRedesSociales div{
+    width: 120px;
+    height: 60px;
+    border-radius: 8px;
+}
+
+#tituloLogin{
+    margin-bottom: 20px;
+    color: aliceblue;
+}
+
+.containerOlvidoContraseña{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+.facebook{
+    background-image: url("https://www.designboom.com/wp-content/uploads/2023/09/facebook-new-logo-change-designboom-02.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.google{
+    background-image: url("https://marcaporhombro.com/wp-content/uploads/2015/09/nuebvaG.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.iphone{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgqnvpuJri2sKuKY8hdyzDUt7NCHOD4GAVt3mSnAERd4OjFBxBcrh4xOZe1Z6qXV8nEck&usqp=CAU");
+    background-size: cover;
+    background-position: center;
+}
+
+.discord{
+    background-image: url("https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/04/untitled-design-233.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width:1200px){
+    .contenedorPrincipalLogin>div:first-child{
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .contenedorPrincipalLogin>div:nth-of-type(2){
+        display: none;
+    }
+}
+
+
+/* <--------------------PAG PRODUCTOS--------------------> */
+
+.buscadorProducto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buscadorProducto>input{
+    width: 400px;
+}
+
+.contenedorProductos{
+    margin: 20px auto;
+    width: 80vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,400px);
+    justify-content: center;
+    gap: 20px;
+   
+}
+
+.contenedorProductos>div{
+    position: relative;
+    border: 2px solid white;
+   
+}
+
+.contenedorProductos>div>img{
+    width: 100%;
+    height: 220px;
+}
+
+.descuento{
+    position: absolute;
+    left: 0%;
+    bottom: 12%;
+    color: white;
+    padding: 5px;
+    background-color: orange;
+    border-top-right-radius: 6px;
+}
+
+.datosJuego{
+    display: flex;
+    justify-content: space-between;
+}
