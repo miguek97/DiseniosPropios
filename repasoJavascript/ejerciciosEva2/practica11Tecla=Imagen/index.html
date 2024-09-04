@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #fotoFondo{
+            width: 100vw;
+            height: 1000vh;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.addEventListener("keyup",(ev)=>{
+            console.log(ev.key);
+           if(ev.ctrlKey && ev.key=="F12"){
+                console.log("si");
+                let body=document.querySelector('body');
+                let img=document.createElement('img');
+                img.setAttribute("src","https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/1200px-ChatGPT_logo.svg.png");
+                img.setAttribute("alt","imagen");
+                body.appendChild(img);
+                img.setAttribute("id","fotoFondo");
+
+           }
+        })
+    </script>
+</body>
+</html>

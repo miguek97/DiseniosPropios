@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="s1">
+        <h1>titulo</h1>
+        <p>Ejemplo de documento <strong>DOM</strong> Visión en árbol</p>
+    </section>
+    <section id="s2">
+        <p>Aquí solo hay texto</p>
+    </section>
+    <script>
+
+        var raizPagina=document;
+        console.log(raizPagina.childNodes);
+        
+        visualizarElementos(raizPagina);
+
+        function visualizarElementos(raizPagina){
+            for(let hijos of raizPagina.children){
+
+                if(hijos.children.length>0){
+                    console.log(hijos.nodeName);
+                    visualizarElementos(hijos);
+                }else{
+                    console.log(hijos.nodeName);
+                }
+
+                for(let atributo of hijos.attributes){
+                    console.log(atributo.name);
+                }
+            }
+        }
+
+
+    </script>
+</body>
+</html>

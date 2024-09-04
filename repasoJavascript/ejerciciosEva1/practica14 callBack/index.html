@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+
+
+      
+    var body=document.querySelector('body');
+    
+
+      function cambioColorFondo(){
+            let numeroA=parseInt(Math.random()*256);
+            let numeroB=parseInt(Math.random()*256);
+            let numeroC=parseInt(Math.random()*256);
+
+            body.style.backgroundColor=`rgb(${numeroA},${numeroB},${numeroC})`;
+
+
+      }
+        setInterval(cambioColorFondo,2000);
+
+        
+    
+
+    </script>
+</body>
+</html>

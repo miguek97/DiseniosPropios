@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            width: 200px;
+            height: 100px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore impedit similique quibusdam corrupti reiciendis beatae quasi assumenda atque cum inventore doloribus doloremque iure, repudiandae maxime dolor exercitationem laboriosam nisi sed?
+        <button>Cerrar</button>
+    </p>
+    <script>
+        let botonCerrar=document.querySelector("button");
+        botonCerrar.addEventListener("click",(ev)=>{
+            let p=document.querySelector('p');
+            p.style.display="none";
+        })
+    </script>
+</body>
+</html>

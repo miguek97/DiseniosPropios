@@ -1,0 +1,234 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+
+h3{
+    color: aqua;
+    background-color: aquamarine;
+    width: 200px;
+    top: 200px;
+    right: -60px;
+    position: absolute;
+    transform: rotateZ(90deg);
+    z-index: 4;
+    
+}
+
+.menuHamburguesa{
+    position: absolute;
+    z-index: -1;
+    width: 80px;
+    height: 80px;
+    background-color: red;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menuHamburguesa>span{
+    width: 80%;
+    height: 2px;
+    background-color: aliceblue;
+}
+
+
+#input{
+    z-index: -1;
+    width: 80px;
+    height: 80px;
+    position:absolute;
+    top: 0%;
+    opacity: 0.5;
+}
+
+#input:checked+.menuHamburguesa{
+    background-color: blue;
+}
+
+span{
+    transition-duration: 0.5s;
+}
+
+
+
+#input:checked+.menuHamburguesa>span:first-of-type{
+    transform: rotateZ(45deg) translateY(20px)translateX(20px);
+}
+
+#input:checked+.menuHamburguesa>span:nth-child(2){
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+
+
+#input:checked+.menuHamburguesa>span:last-of-type{
+    transform: rotateZ(-45deg) translateY(-20px)translateX(12px);
+}
+
+
+#input:checked~header{
+    transform: translateY(-100%);
+    
+}
+
+header{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: black;
+    color: aliceblue;
+    transition-duration: 0.5s;
+    
+}
+
+header img{
+    width: 10vw;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+header>div{
+    display: flex;
+    align-items: center;
+}
+
+nav{
+    width: 30vw;
+
+}
+
+header>nav>ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+   width: 100%;
+   height: 100%;
+}
+
+ul>li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header a{
+    display: block;
+    background-color: red;
+    padding: 20px;
+}
+
+
+/* parte de la tabla */
+
+section{
+  
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+
+}
+
+section>div{
+    border: 2px solid black;
+    height: 400px;
+}
+
+@media (max-width:400px) {
+    
+    header{
+       position: relative;
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0px;
+        background-color: black;
+        color: aliceblue;
+    }
+    
+    header img{
+        width: 20vw;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+    
+    header>div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav{
+        width: 100vw;
+    
+    }
+    
+    header>nav>ul{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        width: 100%;
+        height: 100%;
+    }
+    
+    ul>li{
+        display: flex;
+        width: 100%;
+        background-color: aqua;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    header a{
+        display: block;
+        background-color: red;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menuHamburguesa{
+        z-index: 1;
+    }
+
+    .menuHamburguesa{
+        position: absolute;
+        z-index: 1;
+        width: 80px;
+        height: 80px;
+        background-color: red;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .menuHamburguesa>span{
+        width: 80%;
+        height: 2px;
+        background-color: aliceblue;
+    }
+    
+    
+    #input{
+        z-index: 2;
+        width: 80px;
+        height: 80px;
+        position:absolute;
+        top: 0%;
+        opacity: 0.5;
+    }
+
+
+}
+

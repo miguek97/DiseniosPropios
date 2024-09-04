@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="buscadorGoogle()">google</button>
+    <script>
+
+        function buscadorGoogle(){
+            window.location.href="https://www.google.com/search?gs_ssp=eJzj4tTP1TcwMU02T1JgNGB0YPBiS8_PT89JBQBASQXT&q=google&rlz=1C1GCEA_enES990ES990&oq=googl&gs_lcrp=EgZjaHJvbWUqEwgBEC4YgwEYxwEYsQMY0QMYgAQyEAgAEAAYgwEY4wIYsQMYgAQyEwgBEC4YgwEYxwEYsQMY0QMYgAQyCggCEAAYsQMYgAQyBggDEEUYOTIKCAQQABixAxiABDIGCAUQRRhBMgYIBhBFGEEyBggHEEUYQdIBCDE4ODFqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8&safe=active&ssui=on";
+            clearTimeout(verPato);
+
+        }
+
+        function buscadorPato(){
+
+            window.location.href="https://duckduckgo.com/";
+        }
+        var verPato=setTimeout(buscadorPato,4000);
+       
+    </script>
+</body>
+</html>

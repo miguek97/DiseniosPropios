@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>El numero de cookies es:</h2>
+        <button id="add">add</button>
+        <button id="delete">Delete</button>
+        <script>
+            if(document.cookie.length>0){
+                let cookieString=document.cookie;
+                let arrayCookie=cookieString.split("=");
+                document.write(`<p  id='numCookies'>El numero es ${arrayCookie[1]} veces </p>`)
+            }else{
+                document.write("<p  id='numCookies'>El numero es 0 veces </p>");
+            }
+        </script>
+
+
+            
+        
+        
+    </div>
+
+    <script>
+
+ 
+
+
+
+
+
+
+
+       
+        let add=document.getElementById("add");
+        let delet=document.getElementById("delete");
+        let numCookies=document.getElementById("numCookies");
+
+
+
+       let contadorCookie=1;
+ 
+                     //Crea un objeto de tipo Fecha con la fecha actual 
+                     let hoy = new Date(); 
+/*crea una variable tomando los milisegundos de hoy y sumando los milisegundos 
+de la semana que viene*/ 
+let caducidadMs = hoy.getTime() + 1000 * 60 * 60 * 24 * 7; 
+/*Convierte los milisegundos a un objeto Date que representa la fecha de dentro 
+de una semana*/ 
+let caducidad = new Date (caducidadMs); 
+
+        add.addEventListener("click",ev=>{
+            let cookieString=document.cookie;
+            let arrayCookie=cookieString.split("=");
+            if(document.cookie.length>0){
+              
+                let nuevoValor=++arrayCookie[1];
+                document.cookie=`contador=${nuevoValor};expires = ${caducidad.toUTCString()};path=/`;
+                numCookies.innerHTML=`Has entrado ${nuevoValor} veces`;
+            }else{
+                document.cookie = `contador=${contadorCookie};expires = ${caducidad.toUTCString()};path=/`;
+                numCookies.innerHTML=`Has entrado ${contadorCookie} veces`;
+            }
+ 
+        })
+
+        delet.addEventListener("click",ev=>{
+            document.cookie = `contador=0;expires = ${caducidad.toUTCString()};path=/`;
+            numCookies.innerHTML=`Has entrado 0 veces`;
+        })
+
+
+        // expires=Fri, 31 Dec 9999 23:59:59 GMT
+
+       
+
+     
+
+
+
+    </script>
+</body>
+</html>

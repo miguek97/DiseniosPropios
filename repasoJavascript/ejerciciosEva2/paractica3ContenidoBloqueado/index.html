@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .censurado{
+            background-color: brown;
+            color: aqua;
+            font-size: bold;
+        }
+    </style>
+</head>
+<body>
+    <p>comida</p>
+    <p>calor</p>
+    <p>judias</p>
+    <p>sexo</p>
+    <p>churros</p>
+    <script>
+        var parrafos=document.getElementsByTagName('p');
+      
+        for(let valor of parrafos){
+            if(valor.innerText=="sexo"){
+                valor.innerText="censurado";
+                valor.classList.add("censurado");
+            }
+        }
+    </script>
+</body>
+</html>

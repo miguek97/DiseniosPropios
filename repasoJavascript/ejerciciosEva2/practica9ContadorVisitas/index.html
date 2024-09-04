@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <button id="aceptar">Aceptar</button>
+        <button id="eliminar">Eliminar</button>
+        <p></p>
+    </div>
+    <script>
+        let botonAceptar=document.getElementById("aceptar");
+        let botonCancelar=document.getElementById("eliminar");
+
+     console.log(botonAceptar);
+     console.log(botonCancelar);
+     
+
+
+        botonAceptar.addEventListener("click",(ev)=>{
+            let datosCookie=document.cookie;
+
+            let arrayCookie=datosCookie.split("=");
+            console.log(arrayCookie);
+
+            if(document.cookie.length>0){
+                document.cookie=`contadorCookies=${++arrayCookie[1]};max-age=+3600`;
+
+            }else{
+                let numero=1;
+                document.cookie=`contadorCookies=${numero};max-age=+3600`;
+            }
+
+            let p=document.getElementsByTagName('p');
+            p[0].innerText=`El numero total de cookies es ${++arrayCookie[1]}`;
+            
+            let div=document.querySelector('div');
+            
+       
+        });
+
+        botonCancelar.addEventListener("click",(ev)=>{
+            console.log("adioss");
+            document.cookie=`contadorCookies=1;max-age=-3600`;
+            let p=document.getElementsByTagName('p');
+            p[0].innerText=``;
+        })
+
+        console.log(document.cookie);
+
+
+        
+        
+    
+    
+      
+        
+    </script>
+</body>
+</html>

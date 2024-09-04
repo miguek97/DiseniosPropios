@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div{
+            margin: 10% auto;
+            border: 2px solid black;
+            width: 400px;
+            height: 400px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="div"></div>
+    <script>
+        let div =document.getElementById("div");
+
+        div.addEventListener("mouseover",(ev)=>{
+            ev.target.style.backgroundColor="green";
+
+        });
+
+        div.addEventListener("mouseleave",(ev)=>{
+            ev.target.style.backgroundColor="transparent";
+        });
+
+        div.addEventListener("mousedown",(ev)=>{
+            console.log(ev.button);
+            if(ev.button==0){
+                ev.target.style.backgroundColor="red";
+            }else if(ev.button==2){
+                ev.target.style.backgroundColor="blue";
+            }
+        });
+
+        div.addEventListener("mouseup",(ev)=>{
+            ev.target.style.backgroundColor="green";
+        });
+    </script>
+</body>
+</html>

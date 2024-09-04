@@ -1,0 +1,12 @@
+{
+    "usuarios":[
+        {
+            "nombre":"miguel",
+            "apellidos":"guti"
+        },
+        {
+            "nombre":"josefino",
+            "apellidos":"estrusco"
+        }
+    ]
+}

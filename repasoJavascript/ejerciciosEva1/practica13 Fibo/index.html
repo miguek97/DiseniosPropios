@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let conta=0;
+        let valorA=0;
+        let valorB=1;
+        let acumulador=0;
+        console.log(0,1);
+        function fibo(conta,valor,valorA,valorB,acumulador){
+            if(conta!=valor){
+                acumulador=valorA+valorB;
+                console.log(acumulador);
+                valorA=valorB;
+                valorB=acumulador;
+                ++conta;
+                fibo(conta,valor,valorA,valorB,acumulador);
+              
+            }
+        }
+
+
+
+        let valor=prompt("escribe un numero");
+
+
+        if(!isNaN(valor)){
+            fibo(conta,valor,valorA,valorB,acumulador);
+
+        }
+        
+    </script>
+</body>
+</html>

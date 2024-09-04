@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <p id="numPalabras"></p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem minima debitis ducimus tempore deserunt, et quis optio quod ea eaque cumque recusandae, asperiores mollitia ut quos provident blanditiis voluptatem tempora!</p>
+    <p>Iusto nam deserunt omnis quos qui ea magnam odit porro nulla, asperiores fugiat vero ut consectetur voluptatem totam recusandae esse exercitationem corrupti deleniti optio quae quis commodi. Incidunt, quo aut!</p>
+    <p>Minus iusto hic ipsa quidem est ut? Saepe inventore delectus nulla ex. Consequatur blanditiis doloremque reiciendis quo, quisquam sequi minima, veniam necessitatibus voluptatem, fugiat pariatur porro distinctio. Est, beatae sequi?</p>
+    <p>Vitae in, neque itaque quas deleniti aliquid, quos cum accusamus sint obcaecati, illo dignissimos iusto dolore nesciunt facilis. Quasi cumque laborum cum ad vel voluptatem? Ea optio itaque maiores mollitia.</p>
+    <p>Inventore rem debitis quae soluta maxime doloribus consequuntur temporibus at ipsa perferendis incidunt ratione odit tempore, qui ducimus voluptate. Deleniti reprehenderit earum maiores blanditiis ipsam natus quo incidunt debitis ratione.</p>
+    <p>Facilis, libero! Aliquam corporis qui quaerat quia eos laboriosam cupiditate sunt, velit sit modi perspiciatis minus saepe aspernatur iusto corrupti et deserunt quo ipsum eligendi numquam labore est repellat eius.</p>
+    <p>Nihil incidunt veniam, consequuntur quibusdam aliquid rerum saepe temporibus nesciunt eveniet aperiam quae iste, inventore facere, sed illo libero aspernatur harum. Fugit, rem? Optio commodi ad saepe esse. Ducimus, delectus.</p>
+    <p>Rem quasi praesentium asperiores, deserunt dolores adipisci consequuntur ipsa fugiat a optio nihil qui explicabo ad, soluta magnam est distinctio, corrupti expedita fugit nesciunt quod laudantium atque consectetur? Animi, qui!</p>
+    <p>Odit earum architecto provident quisquam ex, officia mollitia neque, consequuntur debitis laborum molestiae tempore ducimus assumenda maxime. Quibusdam neque eaque quis aperiam itaque, ad fuga distinctio explicabo in illo. Minima?</p>
+    <p>Odit suscipit blanditiis reprehenderit quod accusamus iste, natus vitae? Eveniet accusamus maxime eaque nobis, exercitationem, aliquam dolor obcaecati reiciendis commodi voluptatibus error reprehenderit aperiam. Nihil voluptatibus nobis porro ratione pariatur!</p>
+    <script>
+       var parrafos=document.getElementsByTagName('p');
+        let contadorEspacios=0;
+        for(let parrafo of parrafos){
+            
+            let texto=parrafo.innerText.trim();
+            
+            for(let conta=0;conta<texto.length;conta++){
+                if(texto[conta]==" "){
+                    ++contadorEspacios;
+                }
+            }
+        }
+
+        var numPalabra=document.getElementById("numPalabras");
+        console.log(numPalabra);
+        numPalabra.innerHTML=`<b>El numero de palabras en total es...${contadorEspacios}</b>`;
+
+
+        let contenido=parrafos[0].innerText.replace(/[\s]/g," ");
+    
+        parrafos[0].innerText=contenido;
+        
+        
+
+      
+
+
+    </script>
+</body>
+</html>

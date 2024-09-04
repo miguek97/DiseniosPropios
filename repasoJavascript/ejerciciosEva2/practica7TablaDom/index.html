@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mayus{
+            text-transform: uppercase;
+        }
+
+        .formatoChachi{
+            background-color: blueviolet;
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="texto">
+    <button>Añadir fila</button>
+    <br>
+    <table>
+        <thead>
+            <tr><th>Contenido</th><th>Operación1</th><th>Operación2</th></tr>
+        </thead>
+        <tbody id="bodyTabla">
+            <tr id="fila1">
+                <td>Ejemplo de contenido</td>
+                <td><button>Mayúsculas</button></td>
+                <td><button>Formato chachi</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        
+        let input=document.querySelector("input");
+        let botonAddFila=document.querySelector('button');
+        let cuerpoTabla=document.querySelector("tbody");
+       
+        
+        
+        botonAddFila.addEventListener("click",(ev)=>{
+           
+            let fraseInput=input.value;
+            if(fraseInput.length>0){
+            console.log(cuerpoTabla);
+            let trNuevo=document.createElement("tr");
+            let td1=document.createElement("td");
+            let td2=document.createElement("td");
+            let botonMayusNuevo=document.createElement("button");
+            botonMayusNuevo.innerText="mayusculas";
+            let td3=document.createElement("td");
+            let botonFormatoChachiNuevo=document.createElement("button");
+            botonFormatoChachiNuevo.innerText="formatoChachi";
+
+            cuerpoTabla.appendChild(trNuevo);
+            trNuevo.appendChild(td1);
+            trNuevo.appendChild(td2);
+            trNuevo.appendChild(td3);
+
+
+            td1.innerText=fraseInput;
+         
+            td2.appendChild(botonMayusNuevo);
+            td3.appendChild(botonFormatoChachiNuevo);
+
+           addEventos(botonMayusNuevo,botonFormatoChachiNuevo);
+            }else{
+                console.log("ERROR:EL CAMPO ESTÁ VACÍO");
+            }
+        });
+
+function addEventos(botonMayusNuevo,botonFormatoChachiNuevo){
+
+    botonMayusNuevo.addEventListener("click",(ev)=>{
+        console.log("cambiando letras");
+        let td=botonMayusNuevo.parentNode;
+        let tr=td.parentNode;
+        tr.children[0].classList.toggle("mayus");
+    })
+
+    botonFormatoChachiNuevo.addEventListener("click",(ev)=>{
+        let td=botonFormatoChachiNuevo.parentNode;
+        let tr=td.parentNode;
+        tr.children[0].classList.toggle("formatoChachi");
+    })
+
+}
+    
+    
+    </script>    
+</body>
+</html>

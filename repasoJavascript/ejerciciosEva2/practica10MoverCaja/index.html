@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #gif{
+            position: absolute;
+        }
+    </style>
+</head>
+
+ 
+<body>
+    <script>
+        document.write('<img id="gif" src="https://i.pinimg.com/originals/32/79/46/3279462667fb3498a6aa144e7cdea2ae.gif" alt="a">');
+
+        let gif=document.getElementById("gif");
+        
+
+        document.addEventListener("mousemove",(ev)=>{
+            console.log(ev.clientY);
+              gif.style.top=`${ev.clientY-40}px`;
+              gif.style.left=`${ev.clientX-40}px`;
+
+        })
+    </script>
+</body>
+</html>

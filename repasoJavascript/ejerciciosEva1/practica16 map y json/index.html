@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        table{
+            border-collapse: collapse;
+        }
+
+        .rojo{
+            color: red;
+        }
+
+        .verde{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <p>hola <strong>mundo</strong></p>
+
+
+    <script>
+
+        let miJSON = `{"idPedido":"faa-8444","pedidos":
+        [
+        {"idProducto":"info005","nombre":"Placa_Arduino_one","destPostal":"abarcable"},
+        {"idProducto":"info041","nombre":"Placa_Raspberry_3","destPostal":"No abarcable"},
+        {"idProducto":"gadget024","nombre":"usb_Multi_5puertos","destPostal":"abarcable"}
+        ]}`;
+
+        var mapa=new Map(Object.entries(JSON.parse(miJSON)));
+
+        console.log(mapa);
+
+        var pedidos=mapa.get("pedidos");
+
+        console.log(pedidos);
+
+        document.write('<table border="!">');
+        for(let valor of pedidos){
+            if(valor['destPostal']=="abarcable"){
+                document.write(`<tr class="rojo">`);
+                    document.write(`<td>${valor['nombre']}</td>`);
+                    document.write(`<td>${valor['destPostal']}</td>`);
+            }else{
+                document.write(`<tr class="verde">`);
+                    document.write(`<td>${valor['nombre']}</td>`);
+                    document.write(`<td>${valor['destPostal']}</td>`);
+            }
+
+            document.write(`</tr>`);
+        }
+        document.write("</table>");
+
+        let num=0;
+        function a(){
+            console.log(num);
+            ++num;
+
+            if(num>10){
+                clearInterval(u);
+            }
+        }
+
+        let u=setInterval(a,2000);
+
+
+    </script>
+</body>
+</html>

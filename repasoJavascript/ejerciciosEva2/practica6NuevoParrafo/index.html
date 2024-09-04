@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ol>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam consequuntur officia porro dignissimos nesciunt assumenda magni maxime perspiciatis fugit eaque tempora necessitatibus, commodi nam vel excepturi esse quis accusantium deserunt?</li>
+        <li>Hic doloribus ad blanditiis sapiente facilis! Animi ab molestias cumque beatae ullam quas quam aliquam, repellat eum at nulla tempora, repudiandae et harum, velit aspernatur laudantium soluta exercitationem ipsum est.</li>
+        <li>Reiciendis sint adipisci exercitationem beatae dolorum excepturi veniam provident sit in aspernatur rem possimus maxime, earum doloribus ratione officia quia illum. Corporis unde suscipit placeat enim, corrupti beatae consequatur facilis.</li>
+        <li>Voluptatum dolores dolorem id doloremque ullam quisquam odit laboriosam corrupti eos hic rem, quibusdam itaque commodi. Tenetur voluptate animi, possimus quibusdam veniam modi, tempora nam corrupti quod eos in magnam.</li>
+        <li>Fugit omnis, architecto laborum, dolor expedita nesciunt quia adipisci illo doloremque reiciendis modi suscipit consequuntur nihil porro qui non reprehenderit nostrum totam. Voluptas a cupiditate consectetur aut facere, qui minima.</li>
+        <li>Consectetur sapiente sed magni, qui accusamus vel, impedit enim explicabo corporis, laboriosam quaerat. Voluptatibus labore voluptate eaque autem? Error porro reiciendis temporibus nihil provident quos nesciunt enim inventore commodi voluptatem.</li>
+        <li>Nisi repudiandae delectus quo mollitia, ad debitis blanditiis qui expedita quidem nulla autem temporibus porro, quaerat a nostrum dolores hic aut architecto deleniti fugit ut esse. Soluta repellat non quam?</li>
+        <li>Repudiandae quasi deleniti totam delectus, ipsa dolorum ratione molestiae modi odio sint tempora, hic velit aperiam commodi perferendis rem repellendus? Quis quam necessitatibus provident officiis, illo fugiat veniam nesciunt laboriosam.</li>
+        <li>Et animi maiores sapiente illum cumque assumenda, ad a hic. Corporis, sapiente. Sunt quasi ipsam cumque minima facilis labore doloribus exercitationem ipsum, facere officiis, illum fuga voluptate id, suscipit odio.</li>
+    </ol>
+
+
+    <script>
+
+        let datosCorrecto=false;
+        while( datosCorrecto==false){
+        let introducirFrase=prompt("introduce una frase");
+            let introduceNumero=prompt("intorduce numero 0-9");
+            
+                if(introducirFrase!=null && /[a-zA-Z]/.test(introducirFrase) && /^[0-9]$/.test(introduceNumero) ){
+                    datosCorrecto=true;
+                    let lista=document.querySelector('ol');
+                    let numero=introduceNumero;
+                    console.log(numero);
+                    for(let conta=0;conta<lista.children.length;conta++){
+                        if(conta==numero){
+                            let nuevoParte=document.createElement("li");
+                            nuevoParte.innerText=introducirFrase;
+                            lista.insertBefore(nuevoParte,lista.children[conta]);
+                        }
+                    }
+                }
+        }
+    </script>
+</body>
+</html>
