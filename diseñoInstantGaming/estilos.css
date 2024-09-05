@@ -10,6 +10,7 @@ body{
 }
 
 
+<<<<<<< HEAD
 /* <-------MENÚ HAMBURGUESA-----------> */
 
 .menuHamburguesa{
@@ -78,6 +79,11 @@ header{
     position: fixed;
     z-index: 4;
     top: 0%;
+=======
+/* <--------BARRA NAVEGAIÓN---------> */
+
+header{
+>>>>>>> 63f21f238889d09ade7e4de939ed916d8c40280a
     width: 100vw;
     display: flex;
     justify-content: space-between;
@@ -87,7 +93,10 @@ header{
 header>div{
     display: flex;
     align-items: center;
+<<<<<<< HEAD
     gap: 20px;
+=======
+>>>>>>> 63f21f238889d09ade7e4de939ed916d8c40280a
 }
 
 header>div>h2{
@@ -105,7 +114,11 @@ nav{
 }
 
 header img{
+<<<<<<< HEAD
     width: 80pt;
+=======
+    width: 4vw;
+>>>>>>> 63f21f238889d09ade7e4de939ed916d8c40280a
     border-radius: 50%;
     margin-left: 10px;
 }
@@ -114,11 +127,20 @@ ul{
     display: flex;
     list-style: none;
     
+<<<<<<< HEAD
 }
 
 ul>li{
    padding-top:5px ;
    padding-bottom: 5px;
+=======
+
+}
+
+ul>li{
+    margin-left: 15px;
+
+>>>>>>> 63f21f238889d09ade7e4de939ed916d8c40280a
 }
 
 ul>li>a{
@@ -138,7 +160,11 @@ ul>li>a:hover{
 /* <-------PARTE DE LOS JUEGOS--------> */
 
 .contenedorJuegos{
+<<<<<<< HEAD
     margin:140px auto;
+=======
+    margin:50px auto;
+>>>>>>> 63f21f238889d09ade7e4de939ed916d8c40280a
     width: 60vw;
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -149,7 +175,11 @@ ul>li>a:hover{
 .contenedorJuegos>div{
     position: relative;
     padding-bottom: 70%;
+<<<<<<< HEAD
     cursor: pointer;
+=======
+   
+>>>>>>> 63f21f238889d09ade7e4de939ed916d8c40280a
     
 }
 
@@ -162,12 +192,15 @@ ul>li>a:hover{
     text-align: center;
 }
 
+<<<<<<< HEAD
 .contenedorJuegos>div>div>div{
     display: flex;
     justify-content: space-between;
 }
 
 
+=======
+>>>>>>> 63f21f238889d09ade7e4de939ed916d8c40280a
 .contenedorJuegos img{
     width: 100%;
     border-radius: 4px;
@@ -188,14 +221,23 @@ ul>li>a:hover{
 }
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 63f21f238889d09ade7e4de939ed916d8c40280a
 /* <-------footer--------> */
 
 footer{
     background-color: black;
+<<<<<<< HEAD
     position: relative;
     width: 100vw;
+=======
+   position: absolute;
+   bottom: 0%;
+   width: 100vw;
+>>>>>>> 63f21f238889d09ade7e4de939ed916d8c40280a
     
 }
 
@@ -210,7 +252,11 @@ footer>div{
 
 footer:hover >div{
     transform: scaleX(1);
+<<<<<<< HEAD
     height: 40px;
+=======
+   height: 40px;
+>>>>>>> 63f21f238889d09ade7e4de939ed916d8c40280a
     
  
 }
@@ -233,6 +279,7 @@ footer:hover >h3{
 }
 
 
+<<<<<<< HEAD
 @media (max-width:1200px){
   
     header img{
@@ -305,5 +352,7 @@ footer:hover >h3{
         
     }
 }
+=======
+>>>>>>> 63f21f238889d09ade7e4de939ed916d8c40280a
 
 
